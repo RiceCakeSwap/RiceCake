@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -24,7 +25,10 @@ module.exports = {
     },
     testnet: {
       url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
-      chainId: 97
+      chainId: 97,
+      accounts: [
+        process.env.OWNER_WALLET_PRIVATE_KEY
+      ]
     }
   },
   solidity: {

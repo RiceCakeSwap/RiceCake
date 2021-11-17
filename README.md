@@ -1,15 +1,45 @@
-# Basic Sample Hardhat Project
+# RiceCake
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This project contains the main features of the ricecake application.
 
-Try running some of the following tasks:
+**RiceCake Contracts**
+
+* Token (Testnet): 0x77023221830C2A02Eae7742F15CE491e3f30037d
+
+# Docs
+
+* [WhitePaper](https://ricecake-swap.gitbook.io/wiki/)
+* [BSC Scan (Testnet)](https://testnet.bscscan.com/address/0x77023221830C2A02Eae7742F15CE491e3f30037d)
+
+# How to use
+
+Clone the repository
 
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+git clone git@github.com:RiceCakeSwap/RiceCake.git
 ```
+
+Run yarn at the root of the workspace
+
+```shell
+cd ricecake
+yarn
+```
+
+Testing contracts
+
+```shell
+npx hardhat node
+npx hardhat test
+```
+
+Deploying to a testnet network
+
+```shell
+cp .env.example
+npx hardhat run scripts/deploy.js --network testnet
+```
+
+# Contact Us
+
+* Email: ricecake.swap@gmail.com

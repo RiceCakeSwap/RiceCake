@@ -32,11 +32,11 @@ contract RiceCake is ERC20, Ownable {
     mapping(address => uint256) private _tOwned;
 
     // Fee
-    uint256 public _taxFee = 5;
+    uint256 private _taxFee = 5;
     uint256 private _previousTaxFee = _taxFee;
 
     // Limit
-    uint256 public _maxTxAmount = _tTotal / 100;
+    uint256 private _maxTxAmount = _tTotal / 100;
 
     // Excluded
     address[] private _excluded;
